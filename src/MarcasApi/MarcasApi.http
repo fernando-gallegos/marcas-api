@@ -1,6 +1,41 @@
-@MarcasApi_HostAddress = http://localhost:5243
+@MarcasApi_HostAddress = http://localhost:8080
 
-GET {{MarcasApi_HostAddress}}/weatherforecast/
+### Get all marcas
+GET {{MarcasApi_HostAddress}}/api/marcas
 Accept: application/json
+
+###
+
+### Get marca by ID
+GET {{MarcasApi_HostAddress}}/api/marcas/1
+Accept: application/json
+
+###
+
+### Create new marca
+POST {{MarcasApi_HostAddress}}/api/marcas
+Content-Type: application/json
+
+{
+  "nombre": "Nike",
+  "descripcion": "Marca deportiva internacional"
+}
+
+###
+
+### Update marca
+PUT {{MarcasApi_HostAddress}}/api/marcas/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Nike Updated",
+  "descripcion": "Marca deportiva actualizada"
+}
+
+###
+
+### Delete marca
+DELETE {{MarcasApi_HostAddress}}/api/marcas/1
 
 ###
